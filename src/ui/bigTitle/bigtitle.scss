@@ -1,0 +1,6 @@
+.--bigTitle {
+    font-size: 96px;
+    @media (max-width: 576px) {
+        font-size: 72px;
+    }  
+}

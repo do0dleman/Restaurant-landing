@@ -1,0 +1,10 @@
+.hero {
+    background: rgba($color: #000000, $alpha: .3);
+    padding: 169px 0;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: saturation; 
+    background-position: center;
+}

@@ -1,0 +1,29 @@
+.our-team {
+    padding: 120px 0;
+    &__container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+    }
+
+    &__paragraph {
+        max-width: 500px;
+        display: block;
+        margin-bottom: 76px;
+    }
+
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

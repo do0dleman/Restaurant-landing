@@ -1,0 +1,12 @@
+.japanese-menu {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    &__img {
+        background-image: url('./img/img.jpg');
+    }
+    @media (max-width: 576px) {
+        padding: 60px 8px;  
+    }   
+}

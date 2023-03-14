@@ -1,0 +1,6 @@
+.--mediumTitle {
+    font-size: 64px;
+    @media(max-width: 992px) {
+        font-size: 48px;
+    }
+}

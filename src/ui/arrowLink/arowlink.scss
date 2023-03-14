@@ -1,0 +1,34 @@
+.--arowLink {
+    color: var(--activeColor);
+    position: relative;
+    font-weight: 600;
+    padding-right: 40px;
+    user-select: none;
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    &:hover {
+        text-decoration: underline;
+    }
+    span:nth-child(1), span:nth-child(2), span:nth-child(3) {
+        position: absolute;
+        height: 2px;
+        border-radius: 1px;
+        background-color: var(--activeColor);
+        top: 50%;
+        right: 0;
+    }
+    span:nth-child(1) {
+        width: 32px;
+        transform: translate(0, 50%);
+    }
+    span:nth-child(2), span:nth-child(3) {
+        width: 8px;
+    }
+    span:nth-child(2) {
+        transform: translate(25%, -50%) rotate(45deg);
+    }
+    span:nth-child(3) {
+        transform: translate(25%, 150%) rotate(-45deg);
+    }
+}

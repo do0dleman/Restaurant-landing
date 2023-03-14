@@ -1,0 +1,14 @@
+body {
+    --activeColor: #E49031;
+    --activeHoverColor: #c97d25;
+    --whiteColor: #ffffff;
+    --blackColor: #0E0C0F;
+}
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

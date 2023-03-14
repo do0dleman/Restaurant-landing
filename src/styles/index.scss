@@ -1,0 +1,22 @@
+@import "./nullstyle";
+@import "./fonts";
+@import "./variables";
+
+body {
+  background-color: var(--blackColor);
+  font-family: "Inter";
+  font-size: 18px;
+  color: var(--whiteColor);
+  @media (max-width: 768px) {
+    font-size: 16px;
+}
+}
+
+p {
+  line-height: 24px;
+}
+h1,h2,h3,h4 {
+  font-family: Italianno;
+  font-size: 48px;
+  line-height: 1;
+}

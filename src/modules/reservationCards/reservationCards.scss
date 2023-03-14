@@ -1,0 +1,35 @@
+.reservation-cards {
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding-top: 120px;
+        @media (max-width: 767px) {
+            gap: 12px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__card {
+        text-align: left !important;
+        padding-bottom: 30px;
+        height: 100%;
+        &:last-child {
+            @media (max-width: 767px) {
+                grid-column: span 2;
+            }
+        }
+    }
+    &__title {
+        text-align: center;
+    }
+
+    &__paragraph {
+        text-align-last: left;
+        padding: 0px 16px ;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.menu-card {
+
+    &__item {
+        text-align: left;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+        border-bottom: 2px solid var(--whiteColor);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-title {
+        margin-right: 20px;
+    }
+
+    &__price {
+        text-align: right;
+        white-space: nowrap
+    }
+
+    &__bottom {
+        margin-bottom: 20px;
+    }
+
+    &__paragraph {
+        font-size: 18px;
+        font-family: Inter;
+    }
+}

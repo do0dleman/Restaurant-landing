@@ -1,0 +1,98 @@
+.navbar {
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+    top: 0px;
+    padding: 26px 0;
+    background-color: rgba(0,0,0,0.96);
+    border-bottom: 2px solid rgb(150, 150, 150);
+    transition: background-color 0.3s ease;
+    @media(max-width: 768px) {
+        padding: 32px 0;
+    }
+    &__container {
+        @media(max-width: 768px) {
+            transition: all 0.4s ease;
+            position: fixed;
+            z-index: 19;
+            overflow: scroll;
+            top: 0;
+            background-color: rgba(0,0,0,0.9);
+            width: 100%;
+            transform: translate(0, -100%);
+        }
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            font-size: 20px;
+        }
+        
+    }
+    &__container-active {
+        transform: translate(0, 0);
+    }
+    &__header {
+        @media(max-width: 768px) {
+            position: absolute;
+            top: 26px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+        
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 48px;
+            @media(max-width: 1400px) {
+                margin-right: 12px;
+            }
+            @media(max-width: 768px) {
+                margin-right: 0;
+            }
+        }
+        @media(max-width: 768px) {
+            margin-bottom: 32px;
+        }
+    }
+    &__link {
+        user-select: none;
+        color: var(--whiteColor);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__link-active {
+        text-decoration: underline;
+        color: var(--activeColor);
+    }
+    &__burgerbutton {
+        display: none;
+        @media(max-width: 768px) {
+            display: block;
+        }
+    }
+}
+.navbar-on-top {
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    border-bottom: none;
+}
+.navbar-solid {
+    position: static;
+    transform: translate(0, 0);
+    border-bottom: 4px solid var(--whiteColor);
+}
+

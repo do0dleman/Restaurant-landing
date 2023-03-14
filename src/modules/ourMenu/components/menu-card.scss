@@ -1,0 +1,23 @@
+.menu-card-preview {
+    display: grid;
+    border: 4px solid var(--whiteColor);
+    grid-template-rows: 1fr;
+    background: var(--blackColor);
+    cursor: pointer;
+    @media (max-width: 767px) {
+        aspect-ratio: 1 /1.5 ;
+    }
+    &__title {
+        font-weight: 500;
+        font-family: Inter;
+        font-size: 18px;
+        color: var(--activeColor);
+        text-align: center;
+        padding: 40px;
+        transition: all 0.3s ease;
+    }
+    &:hover > .menu-card-preview__title{
+        background-color: var(--activeColor);
+        color: var(--blackColor);
+    }
+}

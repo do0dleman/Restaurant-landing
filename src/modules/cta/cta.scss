@@ -1,0 +1,16 @@
+.cta {
+    background: url('./img/cta-bg.jpg'), rgba(0,0,0,.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: saturation; 
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 14%;
+    @media (max-width: 767px) {
+        min-height: initial;
+    } 
+    &__grandtitle {
+        margin-bottom: 120px;
+    }
+}

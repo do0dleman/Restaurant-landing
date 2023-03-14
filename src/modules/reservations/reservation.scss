@@ -1,0 +1,35 @@
+.reservation {
+    padding: 120px 0;
+    &__container{
+        position: relative;
+        text-align: center;
+        padding: 70px 80px;
+        border: 8px solid var(--whiteColor);
+        border-bottom: none;
+        margin: 0 12px;
+        max-width: 100%;
+        width: fit-content;
+        @media (max-width: 767px) {
+            padding: 48px 40px 60px;
+        }
+        &::after, &::before {
+            position: absolute;
+            content: '';
+            height: 0;
+            width: 31%;
+            bottom: 0;
+            border: 4px solid var(--whiteColor);
+        }
+        &::after {
+            left: 0;
+            transform: translate(-8px, 50%);
+        }
+        &::before {
+            right: 0;
+            transform: translate(8px, 50%);
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+}

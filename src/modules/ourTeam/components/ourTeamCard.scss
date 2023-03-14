@@ -1,0 +1,22 @@
+.our-team {
+    .--image {
+        height: 320px;
+        background-position: center !important;
+        background-size: cover !important;
+    }
+    &__card {
+        height: 400px;
+        text-align: center;
+        width: 100%;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+    &__name {
+        font-size: 24px;
+        margin: 20px 0 12px;
+    }
+
+    &__post {
+    }
+}

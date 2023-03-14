@@ -1,0 +1,41 @@
+.reserv-form {
+    &__input-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px 20px;
+        grid-template-areas: 
+        "top1   top1   top1   top2   top2   top2"
+        "bottom1 bottom1 bottom2 bottom2 bottom3 bottom3";
+    }
+    &__input {
+        grid-area: bottom;
+        &:nth-child(1) {
+            grid-area: top1;
+        }
+        &:nth-child(2) {
+            grid-area: top2;
+        }
+        &:nth-child(3) {
+            grid-area: bottom1;
+        }
+        &:nth-child(4) {
+            grid-area: bottom2;
+        }
+        &:nth-child(5) {
+            grid-area: bottom3;
+        }
+    }
+
+    &__submit {
+        background-color: var(--activeColor);
+        width: 33%;
+        font-size: 18px;
+        padding: 12px 0;
+        font-weight: 600;
+        cursor: pointer;
+        position: absolute;
+        transform: translate(-50%, 50%);
+        bottom: 0;
+        left: 50%;
+    }
+}

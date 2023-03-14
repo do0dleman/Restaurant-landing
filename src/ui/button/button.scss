@@ -1,0 +1,14 @@
+.--button {
+    font-weight: 600;
+    font-family: Inter;
+    font-size: 18px;
+    padding: 16px;
+    background-color: var(--activeColor);
+    cursor: pointer;
+    position: relative;
+    color: var(--blackColor);
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: var(--activeHoverColor);
+    }
+}

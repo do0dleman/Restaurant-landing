@@ -1,0 +1,16 @@
+.--form-input {
+    background-color: transparent;
+    color: var(--whiteColor);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--whiteColor);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    &:focus::placeholder {
+        opacity: 1;
+    }
+    &::placeholder {
+        color: var(--whiteColor);
+        opacity: 0.5;
+        font-size: 18px;
+    }
+}
