@@ -5,6 +5,11 @@
     background-color: rgba(0,0,0, 0.8);
     padding: 40px 0;
     position: relative;
+    p {
+        @media (max-width: 576px) {
+            font-size: 12px;
+        } 
+    }
     @media (max-width: 768px) {
         width: 80%;
         margin: 0 auto;
