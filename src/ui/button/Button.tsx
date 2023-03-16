@@ -2,6 +2,7 @@ import { Link, LinkProps } from 'react-router-dom'
 import './button.scss'
 import { HashLink } from 'react-router-hash-link';
 import { MouseEventHandler } from 'react';
+import base from '../../utils/base';
 
 interface ButtonProps {
     className: string
@@ -15,7 +16,7 @@ export default function Button(props: ButtonProps) {
     return (
         <HashLink
             smooth
-            to={to}
+            to={`${base}${to}`}
             state={state}
             className={`${className} --button`}
             {...rest}>{children}</HashLink>

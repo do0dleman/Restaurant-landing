@@ -7,6 +7,7 @@ import Reservations from "../pages/Reservations";
 import Welcome from "../pages/Welcome";
 import Layout from "./Layout";
 import './animation.scss'
+import base from "../utils/base";
 
 export default function Router() {
     const location = useLocation()
@@ -30,7 +31,7 @@ export default function Router() {
     }
     return (
         <Routes location={displayLocation}>
-            <Route path='/' element={
+            <Route path={base} element={
                 <Layout
                     onAnimationEnd={HandleAnimationEnd}
                     transitionStage={transitionStage}

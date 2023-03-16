@@ -1,4 +1,5 @@
 import { NavLink, NavLinkProps } from "react-router-dom"
+import base from "../../../utils/base"
 
 interface NavBarLinkProps extends NavLinkProps {
 
@@ -16,7 +17,7 @@ export default function NavBarLink(props: NavBarLinkProps) {
                         `${className} ${className}-active` :
                         `${className}`
                 }}
-                to={to}
+                to={`${base}${to}`}
             >{children}</NavLink>
         </li>
     )
