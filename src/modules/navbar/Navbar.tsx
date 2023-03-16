@@ -5,6 +5,7 @@ import useIsOnScrolTop from "../../hooks/useIsOnScrolTop";
 import BurgerButton from "../../ui/burgerButton/BurgerButton";
 import Button from "../../ui/button/Button";
 import SmallTitle from "../../ui/smallTitle/SmallTitle";
+import base from "../../utils/base";
 import NavBarLink from "./components/NavBarLink";
 import './navbar.scss'
 
@@ -23,9 +24,9 @@ export default function Navbar() {
     const [isSolid, setSolid] = useState(false)
 
     useEffect(() => {
-        if (location.pathname === '/contact')
+        if (location.pathname === base + '/contact')
             setSolid(true)
-        if (location.pathname !== '/contact')
+        if (location.pathname !== base + '/contact')
             setSolid(false)
     }, [location])
 
