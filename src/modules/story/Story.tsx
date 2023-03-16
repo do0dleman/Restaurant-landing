@@ -22,8 +22,7 @@ export default function Story() {
                         Our restaurant provides a variety of Asian dishes including Chinese food, Japanese Food, Korean Food.
                     </p>
                     <ArrowLink
-                        to={'/about'}
-                        state={{ title: 'story' }}
+                        to={'/about#about-story'}
                         className={'story__link'}>
                         Read More
                     </ArrowLink>

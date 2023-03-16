@@ -4,7 +4,7 @@ import MediumTitle from "../../ui/mediumTitle/MediumTitle";
 import './aboutStory.scss'
 export default function AboutStory() {
     return (
-        <section className="about-story">
+        <section className="about-story" id="about-story">
             <Container className='about-story__container'>
                 <article className="about-story__article">
                     <MediumTitle className="about-story__title">

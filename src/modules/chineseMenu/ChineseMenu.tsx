@@ -37,7 +37,7 @@ export default function ChineseMenu() {
         },
     ]
     return (
-        <section className="chinese-menu">
+        <section className="chinese-menu" id='chinese-menu'>
             <MenuCard
                 menuItems={menuItems}
                 title="Chinese Food"

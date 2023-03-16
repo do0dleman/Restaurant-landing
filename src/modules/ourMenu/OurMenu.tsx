@@ -14,14 +14,17 @@ export default function OurMenu() {
                     Our Menu
                 </BigTitle>
                 <OurMenuCard
+                    to='/menu#chinese-menu'
                     imageClass={'our-menu__img-1'}
                     title={'Chinese Food'}
                 ></OurMenuCard>
                 <OurMenuCard
+                    to='/menu#japanese-menu'
                     imageClass={'our-menu__img-2'}
                     title={'Japanese Food'}
                 ></OurMenuCard>
                 <OurMenuCard
+                    to='/menu#korean-menu'
                     imageClass={'our-menu__img-3'}
                     title={'Korean Food'}
                 ></OurMenuCard>

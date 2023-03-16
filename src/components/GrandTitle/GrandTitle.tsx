@@ -26,7 +26,7 @@ export default function GrandTitle(props: GrandTitleProps) {
             {
                 button ?
                     <Button
-                        to='/reservations'
+                        to='/#reservation'
                         className={'grandtitle__button'}>
                         Book A Table
                     </Button> :

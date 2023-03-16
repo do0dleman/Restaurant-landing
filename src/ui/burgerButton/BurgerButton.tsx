@@ -3,13 +3,13 @@ import './burgebutton.scss'
 interface BurgerButtonProps {
     function: Function
     className: string
+    state: boolean
 }
 export default function BurgerButton(props: BurgerButtonProps) {
-    const { className } = props
+    const { className, state } = props
 
-    const [isActive, setActive] = useState(false)
     const startRer = useRef(true)
-    const openButtonState = isActive ?
+    const openButtonState = state ?
         'burgerbutton-active' :
         'burgerbutton-inactive'
 
@@ -24,7 +24,6 @@ export default function BurgerButton(props: BurgerButtonProps) {
     ]
     function handleButtonClick() {
         startRer.current = false
-        setActive(!isActive)
         props.function()
     }
     return (

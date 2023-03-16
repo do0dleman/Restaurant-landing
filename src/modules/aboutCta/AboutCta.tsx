@@ -4,6 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import './aboutCta.scss'
 
 export default function AboutCta() {
+
     return (
         <Hero className="about-cta">
             <Container className="about-cta__container">

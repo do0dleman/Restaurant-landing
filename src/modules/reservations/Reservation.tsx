@@ -5,7 +5,7 @@ import './reservation.scss'
 
 export default function Reservation() {
     return (
-        <section className="reservation">
+        <section className="reservation" id="reservation">
             <Container className="reservation__container">
                 <MediumTitle className="reservation__title">
                     Reservation

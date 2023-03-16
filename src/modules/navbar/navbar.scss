@@ -10,7 +10,8 @@
     border-bottom: 2px solid rgb(150, 150, 150);
     transition: background-color 0.3s ease;
     @media(max-width: 768px) {
-        padding: 32px 0;
+        padding: 10px 0;
+        text-align: center;
     }
     &__container {
         @media(max-width: 768px) {
@@ -38,10 +39,13 @@
     }
     &__header {
         @media(max-width: 768px) {
-            position: absolute;
-            top: 26px;
-            left: 50%;
-            transform: translate(-50%, 0);
+            display: none;
+        }
+    }
+    &__mobile-title {
+        display: none;
+        @media(max-width: 768px) {
+            display: initial;
         }
     }
     &__list {
@@ -89,10 +93,23 @@
     position: absolute;
     background-color: rgba(0,0,0,0.2);
     border-bottom: none;
+    .navbar__mobile-title {
+        display: none;
+    }
+    @media(max-width: 768px) {
+        padding: 32px 0;
+    }
 }
 .navbar-solid {
-    position: static;
+    position: relative;
+    left: 0;
     transform: translate(0, 0);
     border-bottom: 4px solid var(--whiteColor);
+    .navbar__mobile-title {
+        display: initial;
+    }
+    @media(max-width: 768px) {
+        padding: 10px 0;
+    }
 }
 

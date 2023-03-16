@@ -1,15 +1,23 @@
 import { Link, LinkProps } from 'react-router-dom'
 import './button.scss'
+import { HashLink } from 'react-router-hash-link';
+import { MouseEventHandler } from 'react';
 
 interface ButtonProps {
     className: string
     children: React.ReactNode
     to: string
     state?: Object
+    onClick: MouseEventHandler<HTMLAnchorElement>
 }
 export default function Button(props: ButtonProps) {
-    const { children, className, state, to } = props
+    const { children, className, state, to, onClick } = props
     return (
-        <Link to={to} state={state} className={`${className} --button`}>{children}</Link>
+        <HashLink
+            smooth
+            to={to}
+            state={state}
+            className={`${className} --button`}
+            onClick={onClick}>{children}</HashLink>
     )
 }

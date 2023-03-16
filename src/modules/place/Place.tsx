@@ -15,8 +15,7 @@ export default function Place() {
                     <p className="place__paragrapah">We have place with 3 different concepts. First open room with a lakeside view. Both rooms with classic feel. And third room with a modern concept.</p>
                     <p className="place__paragrapah">Please book your place now and get the best dining experience.</p>
                     <Button
-                        to={'/reservations'}
-                        state={{ title: 'book a table' }}
+                        to={'/#reservation'}
                         className='place__button'
                     >
                         Book A Table

@@ -4,23 +4,31 @@ import Container from "../../components/Container/Container";
 import useIsOnScrolTop from "../../hooks/useIsOnScrolTop";
 import BurgerButton from "../../ui/burgerButton/BurgerButton";
 import Button from "../../ui/button/Button";
+import SmallTitle from "../../ui/smallTitle/SmallTitle";
 import NavBarLink from "./components/NavBarLink";
 import './navbar.scss'
+
 export default function Navbar() {
+
     const [isOpened, setOpened] = useState(false)
     const isOnTop = useIsOnScrolTop()
     function HandleBurgerButtonClick() {
         setOpened(!isOpened)
     }
+    function HandleLinkClick() {
+        setOpened(false)
+    }
 
     const location = useLocation()
     const [isSolid, setSolid] = useState(false)
+
     useEffect(() => {
         if (location.pathname === '/contact')
             setSolid(true)
         if (location.pathname !== '/contact')
             setSolid(false)
     }, [location])
+
     const containerClasses = [
         'navbar__container',
         isOpened ? 'navbar__container-active' : ''
@@ -28,21 +36,31 @@ export default function Navbar() {
 
     const navbarClasses = [
         "navbar",
-        isOnTop ? "navbar-on-top" : '',
         isSolid ? 'navbar-solid' : '',
+        isOnTop ? "navbar-on-top" : '',
     ].join(' ')
+
     return (
         <nav className={navbarClasses}>
-            <BurgerButton className={'navbar__burgerbutton'} function={HandleBurgerButtonClick} />
+            <BurgerButton
+                className={'navbar__burgerbutton'}
+                state={isOpened}
+                function={HandleBurgerButtonClick} />
+            <SmallTitle className="navbar__mobile-title">
+                48 Cusine
+            </SmallTitle>
             <Container className={containerClasses}>
                 <ul className="navbar__list">
-                    <NavBarLink to='/'>
+                    <NavBarLink to='/'
+                        onClick={HandleLinkClick}>
                         Welcome
                     </NavBarLink>
-                    <NavBarLink to='/menu'>
+                    <NavBarLink to='/menu'
+                        onClick={HandleLinkClick}>
                         Menu
                     </NavBarLink>
-                    <NavBarLink to='/reservations'>
+                    <NavBarLink to='/reservations'
+                        onClick={HandleLinkClick}>
                         Reservations
                     </NavBarLink>
                 </ul>
@@ -50,14 +68,17 @@ export default function Navbar() {
                     48 Cusine
                 </h4>
                 <ul className="navbar__list">
-                    <NavBarLink to='/about'>
+                    <NavBarLink to='/about'
+                        onClick={HandleLinkClick}>
                         About
                     </NavBarLink>
-                    <NavBarLink to='/contact'>
+                    <NavBarLink to='/contact'
+                        onClick={HandleLinkClick}>
                         Contact us
                     </NavBarLink>
                     <Button
-                        to='/reservations'
+                        onClick={HandleLinkClick}
+                        to='/reservations#reservation'
                         className={'navbar__button'}
                     >Order Now</Button>
                 </ul>

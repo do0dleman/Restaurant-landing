@@ -37,7 +37,7 @@ export default function JapaneseMenu() {
         },
     ]
     return (
-        <section className="japanese-menu">
+        <section className="japanese-menu" id="japanese-menu">
             <MenuCard
                 menuItems={menuItems}
                 title="Japanese Food"

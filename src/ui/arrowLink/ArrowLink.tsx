@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import './arowlink.scss'
 
 interface NavLinkProps {
@@ -10,13 +10,13 @@ interface NavLinkProps {
 export default function ArrowLink(props: NavLinkProps) {
     const { to, className, state, children } = props
     return (
-        <NavLink
+        <NavHashLink
             to={to}
             className={`${className} --arowLink`}
             draggable={false}
             state={state}>
             {children}
             <span></span><span></span><span></span>
-        </NavLink>
+        </NavHashLink>
     )
 }
