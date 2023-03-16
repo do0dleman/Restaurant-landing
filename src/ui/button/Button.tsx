@@ -8,16 +8,16 @@ interface ButtonProps {
     children: React.ReactNode
     to: string
     state?: Object
-    onClick: MouseEventHandler<HTMLAnchorElement>
+    onClick?: MouseEventHandler<HTMLAnchorElement>
 }
 export default function Button(props: ButtonProps) {
-    const { children, className, state, to, onClick } = props
+    const { children, className, state, to, ...rest } = props
     return (
         <HashLink
             smooth
             to={to}
             state={state}
             className={`${className} --button`}
-            onClick={onClick}>{children}</HashLink>
+            {...rest}>{children}</HashLink>
     )
 }

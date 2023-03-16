@@ -106,7 +106,9 @@
     transform: translate(0, 0);
     border-bottom: 4px solid var(--whiteColor);
     .navbar__mobile-title {
-        display: initial;
+        @media(max-width: 768px) {
+            display: initial;
+        }
     }
     @media(max-width: 768px) {
         padding: 10px 0;
