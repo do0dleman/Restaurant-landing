@@ -1,18 +1,18 @@
 {
   "name": "48cusine",
   "private": true,
-  "homepage": "https://do0dleman.github.io/restaurant-landing",
+  "homepage": "https://do0dleman.github.io/Restaurant-landing",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
-    "github-pages": "^3.0.2",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.9.0",
