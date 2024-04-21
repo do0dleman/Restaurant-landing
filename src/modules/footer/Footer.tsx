@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import Container from "../../components/Container/Container";
+import base from "../../utils/base"
+
 import './footer.scss'
+
 export default function Footer() {
     return (
         <section className="footer">
@@ -8,22 +11,22 @@ export default function Footer() {
                 <h4 className="footer__title">48 Cusine</h4>
                 <ul className="footer__links">
                     <li>
-                        <NavLink to={'/menu'}>
+                        <NavLink to={`${base}/menu`}>
                             Menu
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/reservation'}>
+                        <NavLink to={`${base}/reservations`}>
                             Reservation
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/about'}>
+                        <NavLink to={`${base}/about`}>
                             About
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/contact us'}>
+                        <NavLink to={`${base}/contact`}>
                             Contact Us
                         </NavLink>
                     </li>
