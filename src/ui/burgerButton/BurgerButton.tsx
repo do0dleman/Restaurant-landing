@@ -8,12 +8,12 @@ interface BurgerButtonProps {
 export default function BurgerButton(props: BurgerButtonProps) {
     const { className, state } = props
 
-    const startRer = useRef(true)
+    const startRef = useRef(true)
     const openButtonState = state ?
         'burgerbutton-active' :
         'burgerbutton-inactive'
 
-    const openButtonStart = startRer.current ?
+    const openButtonStart = startRef.current ?
         'burgerbutton-on-start' :
         ''
     const openButtonClases = [
@@ -23,7 +23,7 @@ export default function BurgerButton(props: BurgerButtonProps) {
         className,
     ]
     function handleButtonClick() {
-        startRer.current = false
+        startRef.current = false
         props.function()
     }
     return (
