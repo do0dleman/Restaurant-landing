@@ -11,7 +11,7 @@ export default function CTA() {
                     title={'48 Cuisine'}
                     button
                     description={
-                        'welcome 48 Cuisine. We have a wide variety of Asian  food. Cooked by profesional chef.'
+                        'Welcome 48 Cuisine. We have a wide variety of Asian  food. Cooked by profesional chef.'
                     } />
             </Container>
         </section>
